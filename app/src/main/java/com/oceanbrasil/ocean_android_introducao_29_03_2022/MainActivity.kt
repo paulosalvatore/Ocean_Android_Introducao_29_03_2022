@@ -1,5 +1,6 @@
 package com.oceanbrasil.ocean_android_introducao_29_03_2022
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -27,6 +28,17 @@ class MainActivity : AppCompatActivity() {
                 // Exibe uma mensagem de erro
                 etNome.error = "Digite um nome válido"
             }
+        }
+
+        // Abrir Nova Tela
+        val btAbrirNovaTela = findViewById<Button>(R.id.btAbrirNovaTela)
+
+        btAbrirNovaTela.setOnClickListener {
+            // Criamos a Intent para ir desta tela para a ResultadoActivity
+            val novaTelaIntent = Intent(this, ResultadoActivity::class.java)
+
+            // Registramos a Intent no Android para que ele crie a tela que foi informada
+            startActivity(novaTelaIntent)
         }
     }
 }
