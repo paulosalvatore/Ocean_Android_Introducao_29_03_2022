@@ -18,10 +18,13 @@ class MainActivity : AppCompatActivity() {
 
         // Cria um listener para o botão 'Enviar'
         btEnviar.setOnClickListener {
+            // Caso o texto que está no etNome não esteja em branco, executa o primeiro bloco
             if (etNome.text.isNotBlank()) {
                 // Esse código será executado quando acontecer um clique no botão
                 tvResultado.text = etNome.text
+            // Caso contrário, se o etNome estiver em branco, executa o segundo bloco
             } else {
+                // Exibe uma mensagem de erro
                 etNome.error = "Digite um nome válido"
             }
         }
