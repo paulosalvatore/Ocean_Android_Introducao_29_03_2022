@@ -10,6 +10,7 @@ class ResultadoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_resultado)
 
+        // Exibindo o nome que foi digitado na outra tela
         val nomeDigitado = intent.getStringExtra("NOME_DIGITADO")
 
         val tvNome = findViewById<TextView>(R.id.tvNome)
